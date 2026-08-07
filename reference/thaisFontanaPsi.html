@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thais Fontana, Psicóloga Clínica. Espaço seguro para sua jornada de autoconhecimento, atendimento psicológico online.">
+    <meta name="keywords" content="Psicóloga, Psicologia Clínica, Atendimento Psicológico Online, Terapia, Saúde Mental, Psicanálise, Terapia para Mulheres">
+    <title>Thais Fontana | Psicóloga Clínica</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Variáveis de Cores e Estilo */
+        :root {
+            --bg-soft: #CAD2C5;
+            --highlight: #84A98C;
+            --mid-tone: #52796F;
+            --text-dark: #354F52;
+            --contrast: #2F3E46;
+            --white: #F9FAFA;
+            --gray-light: #E9ECEF;
+            --transition: all 0.3s ease;
+        }
+
+        /* Resets & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-soft);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('images/mosaic-bg.jpg');
+            background-size: 500px;
+            opacity: 0.12;
+            filter: grayscale(100%) sepia(100%) hue-rotate(85deg) saturate(150%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Tipografia */
+        h1, h2, h3, h4 {
+            color: var(--contrast);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--highlight);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 5rem 0;
+        }
+        .section-white {
+            background-color: var(--white);
+            position: relative;
+            z-index: 1; /* Cobre o background SVG ao rolar */
+        }
+        .text-center {
+            text-align: center;
+        }
+        .max-w-text {
+            max-width: 800px;
+            margin-inline: auto;
+        }
+
+        /* Fundo em bolinhas implementado no body */
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            background-color: var(--mid-tone);
+            color: #fff;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(82, 121, 111, 0.25);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: var(--contrast);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(47, 62, 70, 0.35);
+        }
+
+        /* HEADER & Navegação */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(202, 210, 197, 0.90);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--contrast);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Animação "Florescer" no Header */
+        .florescer-header {
+            margin-left: 10px;
+            color: var(--mid-tone);
+        }
+        .anim-path {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawBranch 5s ease-in-out forwards;
+        }
+        @keyframes drawBranch {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--mid-tone);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            color: var(--contrast);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--contrast);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 110px;
+            padding-bottom: 60px;
+            background: transparent; /* Permite ver o background svg do body */
+        }
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+        .hero-content h1 {
+            color: var(--contrast);
+            margin-bottom: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Image Placeholders */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .image-placeholder {
+            width: 100%;
+            max-width: 450px;
+            aspect-ratio: 3/4;
+            background: linear-gradient(145deg, #e2e8f0, #cbd5e1);
+            border-radius: 20px 100px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: 500;
+            border: 2px dashed #94a3b8;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            text-align: center;
+            padding: 2rem;
+        }
+        .image-placeholder svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        /* Divisória Orgânica (Shape Divider SVG) */
+        .custom-shape-divider-bottom {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+            z-index: 2;
+        }
+        .custom-shape-divider-bottom svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+        .custom-shape-divider-bottom .shape-fill {
+            fill: var(--white);
+        }
+
+        /* ESPECIALIDADES */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .card {
+            background-color: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border-bottom: 5px solid var(--highlight);
+            transition: var(--transition);
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border-bottom-color: var(--mid-tone);
+        }
+        .card h3 {
+            color: var(--mid-tone);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card h3::before {
+            content: '•';
+            color: var(--highlight);
+            font-size: 1.8rem;
+            line-height: 0;
+        }
+
+        /* SOBRE MIM */
+        .sobre-container {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+        .sobre-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .small-placeholder {
+            max-width: 400px;
+            aspect-ratio: 1/1;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+        }
+        .sobre-text {
+            flex: 1.2;
+        }
+        .sobre-text h2 {
+            text-align: left;
+        }
+        .sobre-text h2::after {
+            margin-left: 0;
+        }
+        .sobre-quote {
+            background-color: var(--white);
+            border-left: 5px solid var(--highlight);
+            padding: 2rem;
+            margin: 3rem 0 2rem;
+            font-style: italic;
+            color: var(--mid-tone);
+            font-size: 1.25rem;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .sobre-quote::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: var(--highlight);
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            line-height: 1;
+            font-family: serif;
+        }
+
+        /* O QUE É A PSICOTERAPIA */
+        .psicoterapia-section {
+            background-color: var(--mid-tone);
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+        .psicoterapia-section h2, .psicoterapia-section p, .psicoterapia-section h3 {
+            color: var(--white);
+        }
+        .psicoterapia-section h2::after {
+            background-color: var(--highlight);
+        }
+        .psicoterapia-section p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* MODALIDADES */
+        .modalidades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem auto 0;
+        }
+        .modalidades-grid .card {
+            text-align: center;
+            border-bottom: none;
+            border-top: 5px solid var(--highlight);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 2rem;
+        }
+        .modalidades-grid .card:hover {
+            border-top-color: var(--mid-tone);
+        }
+        .modalidades-grid .card h3 {
+            justify-content: center;
+            width: 100%;
+        }
+        .modalidades-grid .card h3::before {
+            display: none;
+        }
+
+        .icon-modalidade {
+            background-color: var(--bg-soft);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--mid-tone);
+        }
+
+        /* FAQ - ACCORDION */
+        .faq-section {
+            background-color: var(--white);
+            border-top: 1px solid var(--gray-light);
+        }
+        .accordion {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        .accordion-item {
+            border-bottom: 1px solid var(--gray-light);
+        }
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        .accordion-header {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--contrast);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .accordion-header:hover {
+            background-color: #f8fafc;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+            color: var(--highlight);
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+            color: var(--mid-tone);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background-color: #fff;
+        }
+        .accordion-content p {
+            padding: 0 2rem 1.5rem;
+            margin: 0;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* FOOTER & CTA FINAL */
+        footer {
+            background-color: var(--contrast);
+            color: var(--white);
+            padding: 6rem 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        footer h2 {
+            color: var(--white);
+        }
+        footer h2::after {
+            background-color: var(--mid-tone);
+        }
+        .footer-cta {
+            margin-bottom: 4rem;
+        }
+        .footer-cta .btn {
+            background-color: var(--highlight);
+            color: var(--contrast);
+            font-size: 1.2rem;
+            padding: 1.2rem 3rem;
+            margin-top: 1rem;
+        }
+        .footer-cta .btn:hover {
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+        }
+        
+        /* Redes Sociais no Rodapé com Ícones FA */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .footer-links a {
+            color: var(--bg-soft);
+            font-size: 2rem; /* Tamanho considerável para os ícones */
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+        .legal {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+
+        /* BOTÃO FLUTUANTE DO WHATSAPP */
+        .float-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        .float-wa:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+        }
+        .float-wa i {
+            font-size: 2.2rem;
+        }
+
+        /* RESPONSIVIDADE (Mobile-First abordado via min/max-width) */
+        @media (max-width: 992px) {
+            .hero-container, .sobre-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                margin-bottom: 3rem;
+            }
+            .sobre-text h2 {
+                text-align: center;
+            }
+            .sobre-text h2::after {
+                margin-left: auto;
+            }
+            blockquote {
+                border-left: none;
+                border-top: 4px solid var(--highlight);
+                border-radius: 15px;
+                text-align: center;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                position: absolute;
+                top: 110px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-soft);
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            }
+            .nav-links.active {
+                max-height: 400px;
+            }
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links a {
+                display: block;
+                padding: 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
+            }
+            .nav-links a::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            
+            .float-wa {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+            .float-wa i {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Thais Fontana | Psicóloga
+                <svg class="florescer-header" viewBox="0 0 864 1039.79" width="60" height="72" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="anim-path" d="M420.51,794.47c-137.46-.2-263.76-84.77-319.17-209.59-37.46-84.39-40.04-181.39-7.68-267.89-28.88,8.97-60.68-6.22-76.96-30.55-6.51-9.73-3.02-10.91,7.73-11.74,22.12-1.71,37.12,4.14,54.43,17.31,7.97,6.07,9.75,10.56,15.51,17.83.62.78-.04,1.81,2.23,1.24.34-3.41,2.06-6.63,3.37-9.76.31-.74-.57-2-.2-2.76.25-.51,4.55-4.16,4.46-6.65-10.51-6.81-18.15-13.27-24.72-24.13-13.61-22.51-15.97-45.22-9.9-70.67,2.23-9.36,2.77-16.21,12.79-7.87,26.13,21.72,32.49,50.15,29.92,83.06-.08,1.06-.6,2.69.96,2.43,35.65-69.14,97.14-125.81,168.17-157.36,13.76-6.11,40.14-12.83,50.65-21.02,8.63-6.72,5.23-13.94,7.62-23.81,7.29-30,51.16-59,80.57-61.91,1.26-.12,5.01.16,5.13,1.37-10.51,33.84-33.42,69.38-68.94,80.27-8.67,2.66-19.74,2.14-25.3,10.52,17.9,2.6,36.68-7.15,53.5-7.84,4.64-.19,9.52,1.56,13.5.75,4.56-.93,20.47-12.36,27.94-15.27,33.61-13.12,76.73-7.48,106.25,13.03-.08,6.85-72.83,27.03-83.41,24.08l22.19,30.43c1.49,5.3-12.37,5.75-15.78,5.95-32.8,1.99-73.5-4.31-93.59-33.14-3.58-5.13-5.68-11.01-9.59-15.86-4.79,1.55-9.77.39-14.62.83-23.08,2.05-55.5,16.98-76.1,27.97-2.1,1.12-34.95,19.96-33.35,21.13,21.45-.45,46.54,10.04,61.36,25.54,4.58,4.8,17.82,22.73,19.67,28.46,1.55,4.79-.35,6.42-4.94,6.94-30.21,3.45-64.69-13.14-81.81-38.01-1.58-2.3-6.25-12.18-7.02-12.68-1.81-1.17-6.74,3.3-8.33,4.52-88.97,68.24-138.1,188.68-129.09,300.11,14.33,177.23,164.37,318.34,342.54,318.82v-331.09h-27.97c-.27,0-1.45-1.53-2-1.95l.47-2.28c1-1.42,2.92-1.5,4.46-1.67,12.92-1.39,43.01-1.33,56.02-.06,7.04.69,5.79,5.95,3.87,5.95h-28.95v331.09c117.2-.33,226.96-62.55,289.57-160.61,49.67-77.8,65.17-171.01,46.88-261.64-42.05-6.16-64.45-43.28-72.92-81.75-.86-3.91-5.25-22.59-2.31-24.44,5.98-2.57,36.46,15.24,38.14,13.61-2.53-14.75-4.29-29.74-3.96-44.74.18-8.32.96-20.12,2.12-28.34.78-5.52,2.65-10.9,3.82-16.32,15.01,11.64,26.34,30.13,33.11,47.9,9.71,25.47,10.56,45.91,4.09,72.38-1.26,5.17-4.21,9.5-3.92,14.85.23,4.17,2.91,8.8,3.75,12.99,3.41,16.94-.36,36.93,5.16,54.28,1.68.35,1.98-.45,2.8-1.61,3.92-5.57,1.51-21.84,2.12-29.32,2.94-35.84,32.22-67.08,61.49-84.9,2.72-.27,3.14,4.29,3.32,6.24,2.98,32.47-12.77,80.69-43.84,95.72-11.89,5.75-16.18,1.46-20.45,16.86-3.44,12.39.12,23.46.49,35.78,1.6,53.93-7.02,105.2-28.05,154.75-53.99,127.21-182.36,214.33-321.42,214.21v209.76l1.47,1.47h61.35v4.91h-130.05c-1.85,0-1.85-4.91,0-4.91h61.35v-211.23ZM342.98,91.01c26.71-2.44,48.05-20.84,61.64-42.92,2.82-4.58,14.12-24.63,14.7-28.55s.6-5.46-3.48-4.48c-25.33,6.1-56.23,23.69-68.47,47.44-2.82,5.47-5.34,10.25-4.39,16.72,9.27-7.69,16.72-18.37,27.79-23.75,1.62-.79,4.84-2.39,6.55-1.3-13.71,9.64-28.19,20.63-34.34,36.84ZM422.48,101.84c-.74.94,18.99,12.26,20.33,12.56,2.13.47,14.46-.49,17.45-.79,13.98-1.42,32.44-6.51,45.86-11.08,3.03-1.03,18.42-6.3,18.42-9.05-30.34-21.28-89.36-23.21-118.1,1.63-1.01.87-2.05.97-1.63,2.78,8.85,4.53,11.1,1.31,18.62-.5,18.74-4.52,34.46-4.81,53.56-5.34,3.2-.09,6.36-1.78,9.65-.89,1.17.31,2.13,1.51.64,2.34-21.66,2.49-43.91,1.31-64.79,8.35ZM359.66,107.73c13.51,36.4,59.99,45.61,94.7,43.21,2.1-.15,11.03-1.09,11.3-2.47-12.87-31.81-58.98-55.72-92.31-48.16-1.11.25-10.64,3.19-9.76,4.46,10.69,5.23,21.38,10.69,32.4,15.23,14.37,5.91,30.07,9.86,44.13,15.78,1.63.69,4.59.94,3.95,3.39-20.44-3.92-40.52-12.13-59.55-20.45-3.14-1.37-23.75-11.99-24.85-10.97ZM304.69,211.86c-8.14-23.98-30.26-42.85-54.02-50.55-8.1-2.63-19.63-5.5-27.44-1.01-.31,1.5,3.92,3.96,5.01,4.79,4.63,3.5,10.75,7.88,15.68,10.83,7.33,4.39,15.26,6.32,21.51,11.88-3.69,1.04-8.79-1.72-12.43-3.27-12.35-5.26-21.17-13.41-32.7-19.82-1.48,1.69,8.07,14.24,9.78,16.24,17.63,20.67,47.07,35.57,74.62,30.92ZM106.42,281.62c8.25-31.61-.79-73.51-29.9-91.38-7.86,17.71-7.87,38.71-2.2,57.2,3.95,12.88,12.8,31.72,26.22,36.13.93-.96-3.72-23.25-4.57-26.36-2.14-7.88-6.76-14.59-7.19-22.75,6.9,6.99,9.95,18.94,12.29,28.46,1.47,5.95.57,14.46,5.35,18.7ZM758.14,313.06c17.33-39.18,3.52-89.46-25.52-119.35-.93-.96-1.28-1.86-2.92-1.49-4.47,18.25-5.21,40.6-3.98,59.48.34,5.22,3.25,24.22,5.48,27.92.98,1.63,12.46,13.95,14.19,15.27.98.75,1.24,1.91,2.95,1.46,1.36-22.87-4.77-45.01-8.84-67.28,2.14-1.81,2.96,1.83,3.48,3.4,3.8,11.45,8.65,38.47,9.34,50.58.58,10.12-3.22,19.28,3.07,27.38.49.63,2.17,3.06,2.76,2.62ZM762.08,355.31v-17.19c0-3.02-3.17-11.91-4.43-15.21-10.33-27.15-37.89-53.61-67.21-57.98.89,34.8,24.91,87.91,62.56,95.06,1.27.24,6.09,1.2,5.15-1.22-12.25-15.25-25.14-30.14-36.12-46.37-4.32-6.39-12.66-18.24-15.34-24.93-.39-.98-1.23-3.25-.06-3.87,16.45,21.21,29.84,46.06,48.09,65.83.91.99,6.38,7.01,7.38,5.88ZM90.72,310.1c-8.93-14.7-25.98-26.25-42.57-30.57-9.92-2.58-21.76-4.28-31.04.64,13,24.12,44.34,42.47,71.65,34.84-9.9-9.84-24.34-13.08-36.31-19.15,6.6-4.21,36.67,15.56,38.27,14.24ZM778.77,352.85c-.54,5.34,0,12.13,0,17.68,0,.14,1.18,2.58,1.47,2.45,13.16-11.69,21.76-27.5,27.01-44.2,1.79-.18,1,3.26.86,4.31-1.83,14.14-11.71,24.26-16.57,36.95,16.54-4.75,28.75-22.77,35.09-38.06,7.16-17.24,8.34-33.46,10.07-51.85-.39-5.71-8.1-.2-10.31,1.5-20.26,15.59-44.96,44.88-47.63,71.21Z"/>
+                </svg>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#modalidades">Modalidades</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (Transparente para mostrar parallax) -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Espaço seguro para a sua jornada de autoconhecimento e transformação.</h1>
+                    <p class="subtitle">Sou Thais Fontana, psicóloga clínica e escolar especializada em saúde mental, desenvolvimento humano, Psicanálise e educação permanente.</p>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20sessões%20de%20terapia" target="_blank" class="btn">Agendar uma Consulta</a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" style="background: transparent; border: none; box-shadow: none; padding: 0;">
+                        <img src="images/hero.jpg" alt="Thais Fontana" style="width: 100%; max-width: 450px; border-radius: 20px 100px 20px 20px; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divisória Orgânica em SVG (Quebrando a linearidade) -->
+            <div class="custom-shape-divider-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ESPECIALIDADES (Fundo branco bloqueia o Parallax SVG e conecta à divisória da Hero) -->
+        <section id="especialidades" class="section section-white">
+            <div class="container">
+                <h2>Especialidades e Público-Alvo</h2>
+                <div class="grid-cards">
+                    <div class="card">
+                        <h3>Crianças e Adolescentes</h3>
+                        <p>Compreender o processo de desenvolvimento físico e emocional com linguagem e técnicas adequadas para a idade. Foco na elaboração de conflitos e orientação aos responsáveis.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Adultos</h3>
+                        <p>Técnicas e estratégias adequadas ao contexto de cada pessoa, constituindo um processo único e personalizado.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Saúde da Mulher</h3>
+                        <p>Acolhimento a mulheres vítimas de violência e relacionamentos abusivos, resgate da autoestima e estratégias de fortalecimento.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Desenvolvimento Socioemocional</h3>
+                        <p>Estímulos ao desenvolvimento físico e psíquico de jovens.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Acompanhamento Familiar</h3>
+                        <p>Orientação parental, mediação familiar e estratégias para a rotina e dinâmica da casa.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Terapia de Casal</h3>
+                        <p>Espaço focado em melhorar a comunicação, mediar conflitos e promover o fortalecimento da relação. O atendimento segue as diretrizes do Conselho Federal de Psicologia, garantindo respeito, imparcialidade e um ambiente ético para ambas as partes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM (Transparente para mostrar parallax novamente) -->
+        <section id="sobre" class="section">
+            <div class="container sobre-container">
+                <div class="sobre-img" style="flex: 0.8;">
+                    <img src="images/thais.jpg" alt="Thais Fontana" style="width: 100%; max-width: 350px; border-radius: 30px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 8px solid var(--white);">
+                </div>
+                <div class="sobre-text" style="flex: 1.2;">
+                    <h2>Quem eu sou?</h2>
+                    <p>Olá! Meu nome é Thais. Sou psicóloga clínica e meu propósito é promover a saúde mental, auxiliando na elaboração de questões internas.</p>
+                    <p>Acredito que o cuidado acontece por meio de uma escuta sensível, qualificada e totalmente livre de julgamentos. Minha prática é pautada na ética e na empatia, sempre com o objetivo de construir um lugar seguro e acolhedor, em que a sua verdadeira essência ganhe voz.</p>
+                    <p>Ao longo da minha trajetória, tenho me dedicado ao trabalho com diversas faixas etárias. Com crianças e adolescentes, atuo em questões emocionais e do desenvolvimento. No atendimento a adultos, me dedico a acolher e tratar demandas de saúde mental, oferecendo suporte em casos de adoecimento psíquico, transtornos de humor, vivência do luto, relacionamentos abusivos e demais demandas emocionais.</p>
+                    <p>Para entregar sempre o melhor cuidado a quem me procura, tenho especialização em Saúde Mental e Desenvolvimento Humano pela PUCPR e em Educação Permanente em Saúde e Educação pela FIOCRUZ. Atualmente, sigo aprofundando minha escuta clínica por meio da especialização em Psicanálise e Análise do Contemporâneo pela PUCRS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALÉM DA CLÍNICA -->
+        <section class="section section-white">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2 style="text-align: center;">Quem é a Thais além da clínica?</h2>
+                    <div style="display: flex; gap: 3rem; align-items: center; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <p style="font-size: 1.1rem;">Antes de ser psicóloga, sou humana. A clínica exige muita dedicação, mas também é nutrida pela vida lá fora. Por isso, quando não estou trabalhando ou estudando, busco atividades que me conectam com o momento presente e com a minha essência.</p>
+                            <p style="font-size: 1.1rem;">Gosto muito de estar em contato com a natureza, seja cuidando do meu jardim ou na companhia dos meus pets, que sempre trazem muita leveza e alegria para os meus dias. Além disso, encontro um grande respiro na arte, dedicando um tempo para desenhar e pintar telas. Acredito que, ao nutrir espaços de criatividade e autocuidado na minha rotina, me torno mais preparada e apta para também cuidar do outro.</p>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <div class="sobre-quote" style="margin: 0; box-shadow: none; border-left: none; border-top: 5px solid var(--highlight); border-radius: 20px; background-color: var(--bg-soft); padding: 2.5rem 2rem;">
+                                "Sentir-se real é mais do que existir; é encontrar uma maneira de existir como si mesmo." <br><strong style="font-size: 1rem; display: block; margin-top: 15px;">— Donald W. Winnicott</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PSICOTERAPIA & PROCESSO -->
+        <section class="section psicoterapia-section">
+            <div class="container">
+                <h2 style="text-align: center;">Como funciona o processo terapêutico comigo</h2>
+                <div class="max-w-text" style="text-align: center;">
+                    <p>A terapia não é um espaço para conselhos ou fórmulas prontas. Na minha prática clínica, o caminho é único para cada paciente. Meu trabalho é fundamentado na Psicanálise, uma abordagem que busca acolher você em sua totalidade e entender as raízes daquilo que lhe causa sofrimento, bem como novas maneiras de se colocar no mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODALIDADES (Apenas 2 Modalidades, Fundo branco) -->
+        <section id="modalidades" class="section section-white">
+            <div class="container">
+                <h2>Modalidades de Atendimento</h2>
+                <div class="modalidades-grid">
+                    <div class="card">
+                        <div class="icon-modalidade">
+                            <i class="fas fa-video fa-2x"></i>
+                        </div>
+                        <h3>Atendimento On-line</h3>
+                        <p>A teleconsulta de Psicologia é realizada à distância por chamada de vídeo. É uma prática regulamentada, segura e funciona com a mesma qualidade e sigilo do atendimento presencial. Ideal para aliar o cuidado com a saúde mental com a comodidade de estar onde se sentir bem.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-modalidade">
+                            <i class="fas fa-heart-pulse fa-2x"></i>
+                        </div>
+                        <h3>Urgência (On-line)</h3>
+                        <p>Suporte rápido em momentos de crise (ansiedade generalizada, ataques de pânico, rebaixamentos de humor e adversidades do dia a dia) para oferecer acolhimento, amenizar o sofrimento e levantar possibilidades de enfrentamento.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-modalidade">
+                            <i class="fas fa-user-friends fa-2x"></i>
+                        </div>
+                        <h3>Atendimento Presencial</h3>
+                        <p>Sessões realizadas em um consultório acolhedor e seguro, projetado para proporcionar conforto e privacidade. Ideal para quem prefere o contato direto e o ambiente dedicado exclusivamente ao cuidado presencial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (Fundo branco) -->
+        <section id="faq" class="section faq-section section-white">
+            <div class="container">
+                <h2>Dúvidas Frequentes</h2>
+                <div class="accordion">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header active">
+                            O que é a Psicanálise na prática?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content" style="max-height: 300px;">
+                            <p>Nós somos seres complexos. Com frequência, nos vemos repetindo padrões, escolhas e vivenciando angústias sem entender exatamente o motivo. A psicanálise nos ajuda a lançar luz sobre o nosso inconsciente.</p>
+                            <p>O nosso foco não será apenas silenciar um sintoma que incomoda hoje, mas investigar a origem dele, entender o que ele está tentando comunicar e, a partir disso, transformar a maneira como você lida com as próprias emoções e com os conflitos do dia a dia.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Como acontecem as nossas sessões?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Você terá total liberdade para falar sobre o que vier à mente, no seu ritmo e da sua maneira. Podemos conversar sobre seus sentimentos, seus sonhos, situações cotidianas, medos, alegrias ou lembranças do passado.</p>
+                            <p>Não existe um roteiro pré-definido. Apesar disso, não se preocupe em saber exatamente o que dizer. Vamos construir o espaço juntos, conforme fizer mais sentido para você.</p>
+                            <p>O processo de terapia é uma construção. Acontece em sessões semanais de 50 minutos, em que iremos, por meio da elaboração de questões internas, promover a quebra de ciclos repetitivos e abrir caminho para uma vida com mais estabilidade, autonomia e bem-estar.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Qual é o meu papel nesse processo?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Além da escuta sensível, ética e qualificada, meu papel é auxiliar para que você identifique suas questões, intervindo e pontuando algumas percepções e orientações conforme necessário. Juntos, ligamos os pontos da sua história, permitindo a elaboração das demandas, sejam elas mais profundas ou corriqueiras, mas que estejam pesando na sua rotina.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Como saber se a terapia é para mim?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>A terapia é um espaço seguro para qualquer pessoa que busque autoconhecimento, queira lidar melhor com suas emoções, ou esteja passando por momentos de ansiedade, luto, transições de vida ou dificuldades nos relacionamentos. Não é preciso estar em crise para iniciar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            O que esperar da primeira sessão?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Na primeira sessão, o foco é estabelecer um ambiente tranquilo para você compartilhar suas preocupações e expectativas. Buscarei entender seu contexto de vida, sem roteiros rígidos. Tudo é mantido em absoluto sigilo.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            A terapia online funciona?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Sim! A psicoterapia online tem a sua validade comprovada e é regulamentada pelo Conselho Federal de Psicologia (CFP).</p>
+                            <p>O vínculo de confiança, o acolhimento e a elaboração das suas questões acontecem da mesma forma através da tela. O espaço seguro e livre de julgamentos que construímos juntos transcende o ambiente físico do consultório.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Para quem a terapia online é indicada?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Os atendimentos online são realizados com adolescentes a partir de 12 anos e adultos.</p>
+                            <p>A modalidade online é muito indicada para aqueles que têm uma rotina intensa, moram longe, viajam com frequência, possuem limitações de mobilidade ou, simplesmente, se identificam mais com essa forma de atendimento.</p>
+                            <p>Além de manter a mesma qualidade clínica e ética, o atendimento online permite que você realize a sessão no conforto e na segurança do seu próprio espaço. Isso traz mais flexibilidade para a sua rotina, eliminando o estresse e o tempo do deslocamento.</p>
+                            <p>Para que a nossa sessão aconteça da melhor forma, você precisará apenas de uma boa conexão de internet e de um ambiente onde se sinta à vontade e tenha privacidade para falar sem interrupções.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Qual a frequência das sessões e duração do tratamento?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Geralmente, as sessões ocorrem uma vez por semana e duram 50 minutos. A duração total do tratamento varia de acordo com as necessidades e objetivos de cada pessoa, sendo um processo construído em conjunto.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Qual a diferença entre psicólogo e psiquiatra?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>O psicólogo foca na psicoterapia, tratando as questões emocionais e comportamentais através da fala e de intervenções clínicas. O psiquiatra é um médico que avalia a necessidade de intervenção medicamentosa. Em muitos casos, os dois profissionais trabalham juntos.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Como faço para agendar?
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Entre em contato pelo número ou clique no botão de WhatsApp para agendar uma sessão!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER & CTA FINAL -->
+    <footer id="contato">
+        <div class="container text-center">
+            <div class="footer-cta">
+                <h2>Vamos conversar?</h2>
+                <p class="max-w-text" style="color: var(--white); margin-bottom: 2rem;">
+                    Se você se identificou e sente que é o momento de dar esse passo, entre em contato. Estou aqui para tirar suas dúvidas e lhe acompanhar nesta jornada.
+                </p>
+                <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20sessões%20de%20terapia" target="_blank" class="btn">Agendar via WhatsApp</a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#" target="_blank" aria-label="Instagram Profissional"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn Profissional"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin: 3rem 0 1.5rem; opacity: 0.8; color: var(--highlight);">
+                <svg viewBox="0 0 864 1039.79" width="45" height="54" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="anim-path" d="M420.51,794.47c-137.46-.2-263.76-84.77-319.17-209.59-37.46-84.39-40.04-181.39-7.68-267.89-28.88,8.97-60.68-6.22-76.96-30.55-6.51-9.73-3.02-10.91,7.73-11.74,22.12-1.71,37.12,4.14,54.43,17.31,7.97,6.07,9.75,10.56,15.51,17.83.62.78-.04,1.81,2.23,1.24.34-3.41,2.06-6.63,3.37-9.76.31-.74-.57-2-.2-2.76.25-.51,4.55-4.16,4.46-6.65-10.51-6.81-18.15-13.27-24.72-24.13-13.61-22.51-15.97-45.22-9.9-70.67,2.23-9.36,2.77-16.21,12.79-7.87,26.13,21.72,32.49,50.15,29.92,83.06-.08,1.06-.6,2.69.96,2.43,35.65-69.14,97.14-125.81,168.17-157.36,13.76-6.11,40.14-12.83,50.65-21.02,8.63-6.72,5.23-13.94,7.62-23.81,7.29-30,51.16-59,80.57-61.91,1.26-.12,5.01.16,5.13,1.37-10.51,33.84-33.42,69.38-68.94,80.27-8.67,2.66-19.74,2.14-25.3,10.52,17.9,2.6,36.68-7.15,53.5-7.84,4.64-.19,9.52,1.56,13.5.75,4.56-.93,20.47-12.36,27.94-15.27,33.61-13.12,76.73-7.48,106.25,13.03-.08,6.85-72.83,27.03-83.41,24.08l22.19,30.43c1.49,5.3-12.37,5.75-15.78,5.95-32.8,1.99-73.5-4.31-93.59-33.14-3.58-5.13-5.68-11.01-9.59-15.86-4.79,1.55-9.77.39-14.62.83-23.08,2.05-55.5,16.98-76.1,27.97-2.1,1.12-34.95,19.96-33.35,21.13,21.45-.45,46.54,10.04,61.36,25.54,4.58,4.8,17.82,22.73,19.67,28.46,1.55,4.79-.35,6.42-4.94,6.94-30.21,3.45-64.69-13.14-81.81-38.01-1.58-2.3-6.25-12.18-7.02-12.68-1.81-1.17-6.74,3.3-8.33,4.52-88.97,68.24-138.1,188.68-129.09,300.11,14.33,177.23,164.37,318.34,342.54,318.82v-331.09h-27.97c-.27,0-1.45-1.53-2-1.95l.47-2.28c1-1.42,2.92-1.5,4.46-1.67,12.92-1.39,43.01-1.33,56.02-.06,7.04.69,5.79,5.95,3.87,5.95h-28.95v331.09c117.2-.33,226.96-62.55,289.57-160.61,49.67-77.8,65.17-171.01,46.88-261.64-42.05-6.16-64.45-43.28-72.92-81.75-.86-3.91-5.25-22.59-2.31-24.44,5.98-2.57,36.46,15.24,38.14,13.61-2.53-14.75-4.29-29.74-3.96-44.74.18-8.32.96-20.12,2.12-28.34.78-5.52,2.65-10.9,3.82-16.32,15.01,11.64,26.34,30.13,33.11,47.9,9.71,25.47,10.56,45.91,4.09,72.38-1.26,5.17-4.21,9.5-3.92,14.85.23,4.17,2.91,8.8,3.75,12.99,3.41,16.94-.36,36.93,5.16,54.28,1.68.35,1.98-.45,2.8-1.61,3.92-5.57,1.51-21.84,2.12-29.32,2.94-35.84,32.22-67.08,61.49-84.9,2.72-.27,3.14,4.29,3.32,6.24,2.98,32.47-12.77,80.69-43.84,95.72-11.89,5.75-16.18,1.46-20.45,16.86-3.44,12.39.12,23.46.49,35.78,1.6,53.93-7.02,105.2-28.05,154.75-53.99,127.21-182.36,214.33-321.42,214.21v209.76l1.47,1.47h61.35v4.91h-130.05c-1.85,0-1.85-4.91,0-4.91h61.35v-211.23ZM342.98,91.01c26.71-2.44,48.05-20.84,61.64-42.92,2.82-4.58,14.12-24.63,14.7-28.55s.6-5.46-3.48-4.48c-25.33,6.1-56.23,23.69-68.47,47.44-2.82,5.47-5.34,10.25-4.39,16.72,9.27-7.69,16.72-18.37,27.79-23.75,1.62-.79,4.84-2.39,6.55-1.3-13.71,9.64-28.19,20.63-34.34,36.84ZM422.48,101.84c-.74.94,18.99,12.26,20.33,12.56,2.13.47,14.46-.49,17.45-.79,13.98-1.42,32.44-6.51,45.86-11.08,3.03-1.03,18.42-6.3,18.42-9.05-30.34-21.28-89.36-23.21-118.1,1.63-1.01.87-2.05.97-1.63,2.78,8.85,4.53,11.1,1.31,18.62-.5,18.74-4.52,34.46-4.81,53.56-5.34,3.2-.09,6.36-1.78,9.65-.89,1.17.31,2.13,1.51.64,2.34-21.66,2.49-43.91,1.31-64.79,8.35ZM359.66,107.73c13.51,36.4,59.99,45.61,94.7,43.21,2.1-.15,11.03-1.09,11.3-2.47-12.87-31.81-58.98-55.72-92.31-48.16-1.11.25-10.64,3.19-9.76,4.46,10.69,5.23,21.38,10.69,32.4,15.23,14.37,5.91,30.07,9.86,44.13,15.78,1.63.69,4.59.94,3.95,3.39-20.44-3.92-40.52-12.13-59.55-20.45-3.14-1.37-23.75-11.99-24.85-10.97ZM304.69,211.86c-8.14-23.98-30.26-42.85-54.02-50.55-8.1-2.63-19.63-5.5-27.44-1.01-.31,1.5,3.92,3.96,5.01,4.79,4.63,3.5,10.75,7.88,15.68,10.83,7.33,4.39,15.26,6.32,21.51,11.88-3.69,1.04-8.79-1.72-12.43-3.27-12.35-5.26-21.17-13.41-32.7-19.82-1.48,1.69,8.07,14.24,9.78,16.24,17.63,20.67,47.07,35.57,74.62,30.92ZM106.42,281.62c8.25-31.61-.79-73.51-29.9-91.38-7.86,17.71-7.87,38.71-2.2,57.2,3.95,12.88,12.8,31.72,26.22,36.13.93-.96-3.72-23.25-4.57-26.36-2.14-7.88-6.76-14.59-7.19-22.75,6.9,6.99,9.95,18.94,12.29,28.46,1.47,5.95.57,14.46,5.35,18.7ZM758.14,313.06c17.33-39.18,3.52-89.46-25.52-119.35-.93-.96-1.28-1.86-2.92-1.49-4.47,18.25-5.21,40.6-3.98,59.48.34,5.22,3.25,24.22,5.48,27.92.98,1.63,12.46,13.95,14.19,15.27.98.75,1.24,1.91,2.95,1.46,1.36-22.87-4.77-45.01-8.84-67.28,2.14-1.81,2.96,1.83,3.48,3.4,3.8,11.45,8.65,38.47,9.34,50.58.58,10.12-3.22,19.28,3.07,27.38.49.63,2.17,3.06,2.76,2.62ZM762.08,355.31v-17.19c0-3.02-3.17-11.91-4.43-15.21-10.33-27.15-37.89-53.61-67.21-57.98.89,34.8,24.91,87.91,62.56,95.06,1.27.24,6.09,1.2,5.15-1.22-12.25-15.25-25.14-30.14-36.12-46.37-4.32-6.39-12.66-18.24-15.34-24.93-.39-.98-1.23-3.25-.06-3.87,16.45,21.21,29.84,46.06,48.09,65.83.91.99,6.38,7.01,7.38,5.88ZM90.72,310.1c-8.93-14.7-25.98-26.25-42.57-30.57-9.92-2.58-21.76-4.28-31.04.64,13,24.12,44.34,42.47,71.65,34.84-9.9-9.84-24.34-13.08-36.31-19.15,6.6-4.21,36.67,15.56,38.27,14.24ZM778.77,352.85c-.54,5.34,0,12.13,0,17.68,0,.14,1.18,2.58,1.47,2.45,13.16-11.69,21.76-27.5,27.01-44.2,1.79-.18,1,3.26.86,4.31-1.83,14.14-11.71,24.26-16.57,36.95,16.54-4.75,28.75-22.77,35.09-38.06,7.16-17.24,8.34-33.46,10.07-51.85-.39-5.71-8.1-.2-10.31,1.5-20.26,15.59-44.96,44.88-47.63,71.21Z"/>
+                </svg>
+            </div>
+            
+            <p class="legal">Thais Fontana - Psicóloga Clínica | CRP XX/XXXXX<br>&copy; 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20sessões%20de%20terapia" target="_blank" class="float-wa" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS INTERATIVOS -->
+    <script>
+
+        // Menu Mobile (Hamburger)
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const links = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if(navLinks.classList.contains('active')){
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Efeito de sombra no Header ao rolar a página
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.05)';
+            }
+        });
+
+        // Comportamento do Accordion (FAQ)
+        const accordions = document.querySelectorAll('.accordion-header');
+        
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                // Remove active class from all other accordions (opcional, se quiser apenas 1 aberto por vez)
+                accordions.forEach(item => {
+                    if(item !== this && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        item.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                // Alterna classe 'active' no accordion clicado
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

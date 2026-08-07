@@ -1,0 +1,37 @@
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.col p:last-child {
+  margin-bottom: 0;
+}
+
+.quote {
+  margin: 0;
+  border-top: 5px solid var(--highlight);
+  border-radius: 20px;
+  background-color: var(--bg-soft);
+  padding: 2.5rem 2rem;
+  font-style: italic;
+  color: var(--mid-tone);
+  font-size: 1.25rem;
+}
+
+.quoteAuthor {
+  font-size: 1rem;
+  display: block;
+  margin-top: 15px;
+}

@@ -1,0 +1,71 @@
+.footer {
+  background-color: var(--contrast);
+  color: var(--white);
+  padding: 6rem 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer h2 {
+  color: var(--white);
+}
+
+.footer h2::after {
+  background-color: var(--mid-tone);
+}
+
+.cta {
+  margin-bottom: 4rem;
+}
+
+.ctaText {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background-color: var(--highlight);
+  color: var(--contrast);
+  font-size: 1.2rem;
+  padding: 1.2rem 3rem;
+  margin-top: 1rem;
+}
+
+.ctaButton:hover {
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.socialLinks a {
+  color: var(--bg-soft);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.socialLinks a:hover {
+  color: var(--white);
+  transform: translateY(-5px);
+}
+
+.florescerFooter {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 1.5rem;
+  opacity: 0.8;
+  color: var(--highlight);
+}
+
+.legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
