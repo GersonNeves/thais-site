@@ -1,5 +1,6 @@
 import { alemDaClinica } from "@/content/site";
 import { FlorescerIcon } from "@/components/icons/Icons";
+import Reveal from "@/components/Reveal/Reveal";
 import styles from "./AlemDaClinica.module.css";
 
 export default function AlemDaClinica() {
@@ -12,7 +13,7 @@ export default function AlemDaClinica() {
         className={styles.watermark}
       />
       <div className="container">
-        <div className={styles.wrapper}>
+        <Reveal className={styles.wrapper}>
           <h2>{alemDaClinica.heading}</h2>
           <div className={styles.row}>
             <div className={styles.col}>
@@ -30,7 +31,7 @@ export default function AlemDaClinica() {
               </blockquote>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

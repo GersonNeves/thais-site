@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { hero, whatsappHref } from "@/content/site";
 import { FlorescerIcon } from "@/components/icons/Icons";
+import { THAIS_PHOTO_BLUR_DATA_URL } from "@/lib/imagePlaceholders";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -30,6 +31,8 @@ export default function Hero() {
                 fill
                 sizes="(max-width: 992px) 90vw, 450px"
                 priority
+                placeholder="blur"
+                blurDataURL={THAIS_PHOTO_BLUR_DATA_URL}
               />
             </div>
           </div>

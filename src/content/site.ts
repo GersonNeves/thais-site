@@ -62,11 +62,12 @@ export const especialidades = [
 export const sobre = {
   heading: "Quem eu sou?",
   paragraphs: [
-    "Olá! Meu nome é Thais. Sou psicóloga clínica e meu propósito é promover a saúde mental, auxiliando na elaboração de questões internas.",
-    "Acredito que o cuidado acontece por meio de uma escuta sensível, qualificada e totalmente livre de julgamentos. Minha prática é pautada na ética e na empatia, sempre com o objetivo de construir um lugar seguro e acolhedor, em que a sua verdadeira essência ganhe voz.",
-    "Ao longo da minha trajetória, tenho me dedicado ao trabalho com diversas faixas etárias. Com crianças e adolescentes, atuo em questões emocionais e do desenvolvimento. No atendimento a adultos, me dedico a acolher e tratar demandas de saúde mental, oferecendo suporte em casos de adoecimento psíquico, transtornos de humor, vivência do luto, relacionamentos abusivos e demais demandas emocionais.",
-    "Para entregar sempre o melhor cuidado a quem me procura, tenho especialização em Saúde Mental e Desenvolvimento Humano pela PUCPR e em Educação Permanente em Saúde e Educação pela FIOCRUZ. Atualmente, sigo aprofundando minha escuta clínica por meio da especialização em Psicanálise e Análise do Contemporâneo pela PUCRS.",
-  ],
+    "Olá! Meu nome é Thais.",
+    "Acredito que o cuidado em psicoterapia acontece por meio de uma escuta sensível, ética e livre de julgamentos, possibilitando um espaço seguro para que a sua verdadeira essência ganhe voz.",
+    "Atendo crianças e adolescentes, oferecendo suporte clínico e escolar em questões emocionais e do desenvolvimento.",
+    "Com adultos, ​atuo na clínica em demandas complexas de saúde mental, como transtornos de humor, luto, vícios, relacionamentos abusivos e demais  questões psicológicas. ",
+    "A fim de oferecer um atendimento de qualidade, tenho especialização em Saúde Mental e Desenvolvimento Humano (PUCPR) e em Educação Permanente em Saúde e Educação (FIOCRUZ). Atualmente, aprofundo minha prática clínica com a especialização em Psicanálise pela PUCRS."
+  ]
 };
 
 export const alemDaClinica = {

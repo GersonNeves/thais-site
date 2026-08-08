@@ -1,15 +1,16 @@
 import { especialidades } from "@/content/site";
+import Reveal from "@/components/Reveal/Reveal";
 import styles from "./Especialidades.module.css";
 
 export default function Especialidades() {
   return (
     <section id="especialidades" className="section sectionWhite">
       <div className="container">
-        <div className={styles.header}>
+        <Reveal className={styles.header}>
           <span className="eyebrow">Especialidades</span>
           <h2>Especialidades e Público-Alvo</h2>
-        </div>
-        <div className={styles.grid}>
+        </Reveal>
+        <Reveal className={styles.grid}>
           {especialidades.map((item, index) => (
             <div className={styles.card} key={item.title}>
               <span className={styles.number}>
@@ -19,7 +20,7 @@ export default function Especialidades() {
               <p>{item.text}</p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -88,6 +88,14 @@
   transition: var(--transition);
 }
 
+.navLinks a.navLinkActive {
+  color: var(--contrast);
+}
+
+.navLinks a.navLinkActive::after {
+  width: 100%;
+}
+
 .navLinks a:hover::after {
   width: 100%;
 }

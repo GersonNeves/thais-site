@@ -51,6 +51,11 @@ h2 {
 p {
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
+  text-align: justify;
+  text-align-last: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-wrap: pretty;
 }
 
 a {
@@ -60,6 +65,26 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Keep anchor-linked sections from hiding under the fixed header */
+#home,
+#especialidades,
+#sobre,
+#modalidades,
+#faq,
+#contato {
+  scroll-margin-top: var(--header-height);
+}
+
+::selection {
+  background-color: var(--highlight);
+  color: var(--contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--mid-tone);
+  outline-offset: 3px;
 }
 
 /* Layout utilities, shared across section components */

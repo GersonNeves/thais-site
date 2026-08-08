@@ -1,12 +1,13 @@
 import { footer, siteConfig, whatsappHref } from "@/content/site";
 import { FlorescerIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/Icons";
+import Reveal from "@/components/Reveal/Reveal";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
     <footer id="contato" className={styles.footer}>
       <div className="container textCenter">
-        <div className={styles.cta}>
+        <Reveal className={styles.cta}>
           <span className="eyebrow eyebrowLight">Contato</span>
           <h2>{footer.heading}</h2>
           <p className={`maxWText ${styles.ctaText}`}>{footer.text}</p>
@@ -18,7 +19,7 @@ export default function Footer() {
           >
             {footer.cta}
           </a>
-        </div>
+        </Reveal>
 
         <div className={styles.socialLinks}>
           <a

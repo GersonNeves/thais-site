@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { faq } from "@/content/site";
+import Reveal from "@/components/Reveal/Reveal";
 import styles from "./Faq.module.css";
 
 export default function Faq() {
@@ -10,11 +11,11 @@ export default function Faq() {
   return (
     <section id="faq" className="section sectionWhite">
       <div className="container">
-        <div className={styles.sectionHeader}>
+        <Reveal className={styles.sectionHeader}>
           <span className="eyebrow">FAQ</span>
           <h2>Dúvidas Frequentes</h2>
-        </div>
-        <div className={styles.accordion}>
+        </Reveal>
+        <Reveal className={styles.accordion}>
           {faq.map((item, index) => {
             const isOpen = openIndex === index;
             return (
@@ -45,7 +46,7 @@ export default function Faq() {
               </div>
             );
           })}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

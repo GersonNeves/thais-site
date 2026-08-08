@@ -17,6 +17,16 @@
 .card {
   border-top: 1px solid var(--gray-light);
   padding-top: 1.75rem;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-top-color: var(--mid-tone);
+  transform: translateY(-4px);
+}
+
+.card:hover .number {
+  color: var(--contrast);
 }
 
 .card p {
@@ -30,6 +40,7 @@
   font-size: 1.3rem;
   color: var(--mid-tone);
   margin-bottom: 0.75rem;
+  transition: var(--transition);
 }
 
 .card h3 {

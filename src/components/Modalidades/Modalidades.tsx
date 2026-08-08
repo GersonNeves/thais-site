@@ -1,5 +1,6 @@
 import { modalidades } from "@/content/site";
 import { VideoIcon, PulseIcon, UsersIcon } from "@/components/icons/Icons";
+import Reveal from "@/components/Reveal/Reveal";
 import styles from "./Modalidades.module.css";
 
 const icons = {
@@ -12,11 +13,11 @@ export default function Modalidades() {
   return (
     <section id="modalidades" className="section sectionSoft">
       <div className="container">
-        <div className={styles.header}>
+        <Reveal className={styles.header}>
           <span className="eyebrow">Modalidades</span>
           <h2>Modalidades de Atendimento</h2>
-        </div>
-        <div className={styles.grid}>
+        </Reveal>
+        <Reveal className={styles.grid}>
           {modalidades.map((item) => {
             const Icon = icons[item.icon];
             return (
@@ -29,7 +30,7 @@ export default function Modalidades() {
               </div>
             );
           })}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

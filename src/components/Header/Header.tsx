@@ -8,11 +8,34 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeHref, setActiveHref] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.href.slice(1)))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveHref(`#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -51,7 +74,11 @@ export default function Header() {
           >
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} onClick={() => setMenuOpen(false)}>
+                <a
+                  href={link.href}
+                  className={activeHref === link.href ? styles.navLinkActive : ""}
+                  onClick={() => setMenuOpen(false)}
+                >
                   {link.label}
                 </a>
               </li>

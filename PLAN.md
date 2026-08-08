@@ -116,6 +116,59 @@ Rodada de polimento em cima do redesenho da Etapa 2:
 
 Nenhuma mudança de conteúdo/texto ou de paleta de cores nesta etapa também.
 
+## Benchmark e polimento de interação (Etapa 4)
+
+Pesquisa comparativa com sites de psicólogos (`minaab.com`,
+`stateofmindkc.com`, além dos já usados na Etapa 2) e um site geral de
+altíssimo nível (`linear.app`). Padrões internacionais como depoimentos de
+clientes, vídeo de apresentação e funis de agendamento **não** foram
+adotados — conflitam com as normas de publicidade do Conselho Federal de
+Psicologia (CFP) para psicólogos no Brasil.
+
+O que foi implementado (sem mudança de conteúdo, cores ou estrutura):
+
+- Animação de entrada ao rolar a página (`Reveal`, `IntersectionObserver`),
+  aplicada a todas as seções exceto o Hero (protegendo o LCP/SEO).
+- Destaque do link ativo no menu conforme a rolagem (scrollspy).
+- Correção de âncoras: clicar num link do menu não esconde mais o título
+  da seção atrás do header fixo (`scroll-margin-top`).
+- Micro-interações de hover nos cards (Especialidades/Modalidades) e nas
+  fotos (Hero/Sobre).
+- Placeholder desfocado (blur-up) nas fotos via `next/image`.
+- Estilo de seleção de texto e foco de teclado (`::selection`,
+  `:focus-visible`) com as cores da marca.
+- Texto de parágrafo justificado (pedido da Thais), com hifenização e
+  `text-wrap: pretty` para evitar espaços feios em colunas estreitas;
+  títulos/CTAs centralizados (Psicoterapia, CTA final) foram fixados
+  explicitamente em `text-align: center` para não serem afetados pela
+  regra global de justificação.
+
+**Checagem de SEO/performance** (prioridade da Thais): nada disso usa
+`display:none`/`visibility:hidden` (conteúdo sempre presente no HTML
+estático para crawlers), as animações usam apenas `opacity`/`transform`
+(sem Cumulative Layout Shift), e o Hero — maior candidato a LCP — não tem
+nenhuma animação de entrada. Confirmado via `npm run build` e inspeção do
+HTML estático gerado.
+
+## Correção de bug + texto revisado pela Thais (Etapa 5)
+
+- **Bug de mobile corrigido**: abaixo de 992px, as fotos do Hero e da seção
+  "Sobre Mim" desapareciam (colapsavam para 0×0). Causa raiz: o wrapper da
+  foto usava `width: 100%`, mas o pai (item flex em `flex-direction: column`)
+  não tinha uma largura definida porque `align-items: center` (herdado da
+  regra base, usada no layout lado a lado do desktop) faz o item encolher
+  para o conteúdo em vez de esticar — e uma largura em porcentagem dentro de
+  um pai "encolher-para-caber" resolve para 0. Corrigido dando ao wrapper da
+  imagem uma `width: 100%` explícita dentro do media query mobile (em
+  `Hero.module.css` e `Sobre.module.css`). Confirmado via `getBoundingClientRect`
+  no navegador antes/depois. Nas larguras abaixo de 992px, a foto agora
+  aparece corretamente abaixo do texto (comportamento que já era o esperado
+  desde a Etapa 2, só não funcionava por causa desse bug).
+- **Texto da seção "Sobre Mim" revisado pela própria Thais**, editado
+  diretamente em `src/content/site.ts` (não fui eu quem alterou o texto).
+  Corrigi apenas uma vírgula faltando entre dois parágrafos que quebrava a
+  compilação — nenhuma palavra do texto foi alterada por mim.
+
 ## SEO
 
 - Next.js Metadata API por página (title, description, Open Graph, Twitter Card) — já existe uma boa base de title/description/keywords no HTML atual.
@@ -145,6 +198,8 @@ Nenhuma mudança de conteúdo/texto ou de paleta de cores nesta etapa também.
 3. ~~Adicionar a camada de SEO~~ — concluído.
 4. ~~Redesign (Etapa 2)~~ — concluído.
 5. ~~Ajustes finos (Etapa 3)~~ — concluído.
-6. Preencher as informações pendentes listadas acima (WhatsApp, CRP, redes
+6. ~~Benchmark e polimento de interação (Etapa 4)~~ — concluído.
+7. ~~Correção de bug de mobile + texto revisado (Etapa 5)~~ — concluído.
+8. Preencher as informações pendentes listadas acima (WhatsApp, CRP, redes
    sociais, etc.) assim que estiverem disponíveis.
-7. Deploy (Cloudflare + domínio) — passo a passo em [`DEPLOYMENT.md`](./DEPLOYMENT.md).
+9. Deploy (Cloudflare + domínio) — passo a passo em [`DEPLOYMENT.md`](./DEPLOYMENT.md).

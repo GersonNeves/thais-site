@@ -21,6 +21,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-top-color: var(--mid-tone);
+  transform: translateY(-4px);
+}
+
+.card:hover .iconWrap {
+  background-color: var(--mid-tone);
+  color: var(--white);
 }
 
 .card h3 {
@@ -42,4 +53,5 @@
   justify-content: center;
   margin-bottom: 1.5rem;
   color: var(--mid-tone);
+  transition: var(--transition);
 }
