@@ -11,30 +11,23 @@
   color: var(--white);
 }
 
-.footer h2::after {
-  background-color: var(--mid-tone);
-}
-
 .cta {
   margin-bottom: 4rem;
 }
 
 .ctaText {
-  color: var(--white);
+  color: var(--bg-soft);
   margin-bottom: 2rem;
 }
 
 .ctaButton {
   background-color: var(--highlight);
   color: var(--contrast);
-  font-size: 1.2rem;
-  padding: 1.2rem 3rem;
   margin-top: 1rem;
 }
 
 .ctaButton:hover {
   background-color: #fff;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .socialLinks {

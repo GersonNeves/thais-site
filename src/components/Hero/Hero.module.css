@@ -5,6 +5,18 @@
   align-items: center;
   padding-top: var(--header-height);
   padding-bottom: 60px;
+  background-color: var(--bg-soft);
+  overflow: hidden;
+}
+
+.watermark {
+  position: absolute;
+  top: -8%;
+  right: -6%;
+  color: var(--white);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .heroContainer {
@@ -13,12 +25,12 @@
   justify-content: space-between;
   gap: 4rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .heroContent {
   flex: 1;
-  max-width: 600px;
+  max-width: 560px;
 }
 
 .heroContent h1 {
@@ -38,40 +50,36 @@
   justify-content: center;
 }
 
-.imageFrame {
-  width: 100%;
-  max-width: 450px;
-  aspect-ratio: 3 / 4;
+.imageOuter {
   position: relative;
-  border-radius: 20px 100px 20px 20px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.imageOuter::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: -18px;
+  bottom: -18px;
+  border: 1px solid var(--mid-tone);
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.imageFrame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(47, 62, 70, 0.18);
 }
 
 .imageFrame img {
   object-fit: cover;
-}
-
-.shapeDivider {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-  z-index: 2;
-}
-
-.shapeDivider svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 80px;
-}
-
-.shapeFill {
-  fill: var(--white);
 }
 
 @media (max-width: 992px) {
@@ -80,6 +88,16 @@
     text-align: center;
   }
   .heroContent {
+    order: 1;
     margin-bottom: 3rem;
+    max-width: 100%;
+  }
+  .heroImage {
+    order: 2;
+  }
+  .watermark {
+    width: 320px;
+    height: 385px;
+    opacity: 0.25;
   }
 }

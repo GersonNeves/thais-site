@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { faq } from "@/content/site";
-import { ChevronDownIcon } from "@/components/icons/Icons";
 import styles from "./Faq.module.css";
 
 export default function Faq() {
@@ -11,7 +10,10 @@ export default function Faq() {
   return (
     <section id="faq" className="section sectionWhite">
       <div className="container">
-        <h2>Dúvidas Frequentes</h2>
+        <div className={styles.sectionHeader}>
+          <span className="eyebrow">FAQ</span>
+          <h2>Dúvidas Frequentes</h2>
+        </div>
         <div className={styles.accordion}>
           {faq.map((item, index) => {
             const isOpen = openIndex === index;
@@ -24,9 +26,12 @@ export default function Faq() {
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                 >
                   {item.question}
-                  <ChevronDownIcon
-                    className={`${styles.icon} ${isOpen ? styles.iconOpen : ""}`}
-                  />
+                  <span
+                    className={`${styles.toggle} ${isOpen ? styles.toggleOpen : ""}`}
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
                 </button>
                 <div
                   className={`${styles.content} ${isOpen ? styles.contentOpen : ""}`}

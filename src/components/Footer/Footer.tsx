@@ -7,6 +7,7 @@ export default function Footer() {
     <footer id="contato" className={styles.footer}>
       <div className="container textCenter">
         <div className={styles.cta}>
+          <span className="eyebrow eyebrowLight">Contato</span>
           <h2>{footer.heading}</h2>
           <p className={`maxWText ${styles.ctaText}`}>{footer.text}</p>
           <a

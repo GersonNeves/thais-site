@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Roboto, Roboto_Serif } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site";
 
-const poppins = Poppins({
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "700"],
   style: ["normal", "italic"],
-  variable: "--font-poppins",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const robotoSerif = Roboto_Serif({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -61,7 +69,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={poppins.variable}>
+    <html lang="pt-BR" className={`${roboto.variable} ${robotoSerif.variable}`}>
       <body>
         <script
           type="application/ld+json"

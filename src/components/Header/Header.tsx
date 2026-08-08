@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navLinks } from "@/content/site";
+import { navLinks, hero, whatsappHref } from "@/content/site";
 import { FlorescerIcon } from "@/components/icons/Icons";
 import styles from "./Header.module.css";
 
@@ -21,8 +21,16 @@ export default function Header() {
     >
       <div className={`container ${styles.navContainer}`}>
         <a href="#home" className={styles.logo}>
-          Thais Fontana | Psicóloga
-          <FlorescerIcon width={60} height={72} className={styles.florescerHeader} />
+          <FlorescerIcon
+            animated={false}
+            width={40}
+            height={48}
+            className={styles.logoIcon}
+          />
+          <span className={styles.logoText}>
+            <span className={styles.logoName}>Thais Fontana</span>
+            <span className={styles.logoTag}>Psicóloga Clínica</span>
+          </span>
         </a>
 
         <button
@@ -37,17 +45,27 @@ export default function Header() {
           <span />
         </button>
 
-        <ul
-          className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ""}`}
-        >
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={() => setMenuOpen(false)}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.navGroup}>
+          <ul
+            className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ""}`}
+          >
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} onClick={() => setMenuOpen(false)}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`btn ${styles.navCta}`}
+          >
+            {hero.cta}
+          </a>
+        </div>
       </div>
     </header>
   );

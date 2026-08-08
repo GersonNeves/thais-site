@@ -10,16 +10,19 @@ const icons = {
 
 export default function Modalidades() {
   return (
-    <section id="modalidades" className="section sectionWhite">
+    <section id="modalidades" className="section sectionSoft">
       <div className="container">
-        <h2>Modalidades de Atendimento</h2>
+        <div className={styles.header}>
+          <span className="eyebrow">Modalidades</span>
+          <h2>Modalidades de Atendimento</h2>
+        </div>
         <div className={styles.grid}>
           {modalidades.map((item) => {
             const Icon = icons[item.icon];
             return (
               <div className={styles.card} key={item.title}>
                 <div className={styles.iconWrap}>
-                  <Icon />
+                  <Icon width={24} height={24} />
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>

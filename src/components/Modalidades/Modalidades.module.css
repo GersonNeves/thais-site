@@ -1,34 +1,31 @@
+.header {
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+}
+
+.header h2 {
+  margin-bottom: 0;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 3rem auto 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 3rem;
+  row-gap: 3rem;
 }
 
 .card {
-  background-color: #fff;
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  border-top: 5px solid var(--highlight);
-  transition: var(--transition);
+  border-top: 1px solid rgba(47, 62, 70, 0.15);
+  padding-top: 1.75rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-  border-top-color: var(--mid-tone);
-}
-
 .card h3 {
-  color: var(--mid-tone);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
 }
 
 .card p {
@@ -36,10 +33,10 @@
 }
 
 .iconWrap {
-  background-color: var(--bg-soft);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--mid-tone);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;

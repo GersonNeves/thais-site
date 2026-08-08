@@ -1,6 +1,22 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark {
+  position: absolute;
+  bottom: -8%;
+  left: -8%;
+  color: var(--bg-soft);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .row {
@@ -21,17 +37,29 @@
 
 .quote {
   margin: 0;
-  border-top: 5px solid var(--highlight);
-  border-radius: 20px;
-  background-color: var(--bg-soft);
-  padding: 2.5rem 2rem;
+  border-left: 2px solid var(--mid-tone);
+  padding: 0.25rem 0 0.25rem 1.75rem;
+  font-family: var(--font-serif), serif;
   font-style: italic;
   color: var(--mid-tone);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+  line-height: 1.4;
 }
 
 .quoteAuthor {
-  font-size: 1rem;
+  font-family: var(--font-sans), sans-serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   display: block;
-  margin-top: 15px;
+  margin-top: 1rem;
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .watermark {
+    width: 240px;
+    height: 289px;
+  }
 }

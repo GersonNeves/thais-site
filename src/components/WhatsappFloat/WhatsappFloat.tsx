@@ -1,5 +1,5 @@
 import { whatsappHref } from "@/content/site";
-import { ChatIcon } from "@/components/icons/Icons";
+import { WhatsappIcon } from "@/components/icons/Icons";
 import styles from "./WhatsappFloat.module.css";
 
 export default function WhatsappFloat() {
@@ -11,7 +11,7 @@ export default function WhatsappFloat() {
       className={styles.float}
       aria-label="Falar no WhatsApp"
     >
-      <ChatIcon width={30} height={30} />
+      <WhatsappIcon width={32} height={32} />
     </a>
   );
 }

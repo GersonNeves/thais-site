@@ -1,12 +1,19 @@
 import { alemDaClinica } from "@/content/site";
+import { FlorescerIcon } from "@/components/icons/Icons";
 import styles from "./AlemDaClinica.module.css";
 
 export default function AlemDaClinica() {
   return (
-    <section className="section sectionWhite">
+    <section className={`section sectionWhite ${styles.section}`}>
+      <FlorescerIcon
+        animated={false}
+        width={420}
+        height={505}
+        className={styles.watermark}
+      />
       <div className="container">
         <div className={styles.wrapper}>
-          <h2 className="textCenter">{alemDaClinica.heading}</h2>
+          <h2>{alemDaClinica.heading}</h2>
           <div className={styles.row}>
             <div className={styles.col}>
               {alemDaClinica.paragraphs.map((paragraph, index) => (

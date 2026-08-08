@@ -4,11 +4,10 @@ import styles from "./Psicoterapia.module.css";
 export default function Psicoterapia() {
   return (
     <section className={`section ${styles.section}`}>
-      <div className="container">
-        <h2 className="textCenter">{psicoterapia.heading}</h2>
-        <div className="maxWText textCenter">
-          <p>{psicoterapia.text}</p>
-        </div>
+      <div className={`container ${styles.inner}`}>
+        <span className="eyebrow eyebrowLight">Psicanálise</span>
+        <h2 className={styles.heading}>{psicoterapia.heading}</h2>
+        <p className={styles.text}>{psicoterapia.text}</p>
       </div>
     </section>
   );

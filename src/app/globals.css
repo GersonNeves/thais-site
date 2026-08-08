@@ -7,7 +7,7 @@
   --white: #f9fafa;
   --gray-light: #e9ecef;
   --transition: all 0.3s ease;
-  --header-height: 110px;
+  --header-height: 92px;
 }
 
 * {
@@ -21,58 +21,31 @@ html {
 }
 
 body {
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-sans), sans-serif;
   color: var(--text-dark);
-  background-color: var(--bg-soft);
+  background-color: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/mosaic-bg.webp");
-  background-size: 500px;
-  opacity: 0.12;
-  filter: grayscale(100%) sepia(100%) hue-rotate(85deg) saturate(150%);
-  z-index: -1;
-  pointer-events: none;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-serif), serif;
   color: var(--contrast);
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 1.3;
+  font-size: clamp(2.15rem, 3.7vw + 0.9rem, 3.35rem);
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: var(--highlight);
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
+  font-size: clamp(1.7rem, 1.9vw + 1.1rem, 2.4rem);
 }
 
 p {
@@ -98,13 +71,15 @@ img {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .sectionWhite {
   background-color: var(--white);
-  position: relative;
-  z-index: 1;
+}
+
+.sectionSoft {
+  background-color: var(--bg-soft);
 }
 
 .textCenter {
@@ -116,37 +91,87 @@ img {
   margin-inline: auto;
 }
 
+/* Small uppercase label above a heading, e.g. "—— Sobre Mim" */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid-tone);
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background-color: var(--mid-tone);
+}
+
+.eyebrowLight {
+  color: var(--bg-soft);
+}
+
+.eyebrowLight::before {
+  background-color: var(--bg-soft);
+}
+
 .btn {
   display: inline-block;
-  background-color: var(--mid-tone);
+  background-color: var(--contrast);
   color: #fff;
-  padding: 1rem 2.2rem;
-  border-radius: 50px;
+  padding: 0.95rem 2rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   transition: var(--transition);
-  box-shadow: 0 8px 20px rgba(82, 121, 111, 0.25);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
 .btn:hover {
+  background-color: var(--mid-tone);
+}
+
+.btnOutline {
+  background-color: transparent;
+  color: var(--contrast);
+  border: 1px solid var(--contrast);
+}
+
+.btnOutline:hover {
   background-color: var(--contrast);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(47, 62, 70, 0.35);
+  color: #fff;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.6rem;
-  }
+/* Secondary, lighter-weight call to action: text + underline + arrow */
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--contrast);
+  text-decoration: none;
+  border-bottom: 1px solid var(--contrast);
+  padding-bottom: 0.2rem;
+  transition: var(--transition);
 }
 
-/* Animated "florescer" branch icon (header logo + footer mark) */
+.textLink:hover {
+  color: var(--mid-tone);
+  border-color: var(--mid-tone);
+}
+
+/* Animated "florescer" branch icon (logo mark, used in several places) */
 .florescerPath {
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
