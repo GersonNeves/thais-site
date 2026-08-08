@@ -55,7 +55,7 @@ export const especialidades = [
   },
   {
     title: "Terapia de Casal",
-    text: "Espaço focado em melhorar a comunicação, mediar conflitos e promover o fortalecimento da relação. O atendimento segue as diretrizes do Conselho Federal de Psicologia, garantindo respeito, imparcialidade e um ambiente ético para ambas as partes.",
+    text: "Espaço focado em melhorar a comunicação, mediar conflitos e promover o fortalecimento da relação.",
   },
 ];
 
