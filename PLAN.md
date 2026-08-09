@@ -202,9 +202,9 @@ HTML estático gerado.
 
 ## Informações pendentes (preencher quando disponíveis)
 
-- Número real de WhatsApp (placeholder atual: `5500000000000`).
-- Número de registro no CRP (placeholder atual: `CRP XX/XXXXX`).
-- URLs reais do Instagram e LinkedIn (atualmente `#`).
+- ~~Número real de WhatsApp~~ — preenchido pela Thais (`5516920032538`).
+- ~~Número de registro no CRP~~ — preenchido pela Thais (`CRP 06/160986`).
+- ~~URLs reais do Instagram e LinkedIn~~ — preenchidas pela Thais.
 - Cidade/região de atendimento presencial, se houver (para SEO local).
 - Domínio do site — ainda a definir (decisão adiada para a etapa de deploy).
 - Apple touch icon (`apple-icon.png`, usado ao salvar o site na tela inicial

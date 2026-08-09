@@ -4,12 +4,12 @@
 export const siteConfig = {
   // TODO: replace with the real production domain once it's registered.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://thaisfontanapsi.com.br",
-  whatsappNumber: "5500000000000", // TODO: substituir pelo número real
+  whatsappNumber: "5516920032538",
   whatsappMessage:
     "Olá, gostaria de saber mais sobre as sessões de terapia",
-  instagramUrl: "#", // TODO: substituir pela URL real
-  linkedinUrl: "#", // TODO: substituir pela URL real
-  crp: "CRP XX/XXXXX", // TODO: substituir pelo número real
+  instagramUrl: "https://www.instagram.com/thaisfontanapsi",
+  linkedinUrl: "https://www.linkedin.com/in/thaisfontanapsi",
+  crp: "CRP 06/160986",
 };
 
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
