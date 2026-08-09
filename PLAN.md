@@ -169,6 +169,24 @@ HTML estático gerado.
   Corrigi apenas uma vírgula faltando entre dois parágrafos que quebrava a
   compilação — nenhuma palavra do texto foi alterada por mim.
 
+## Segunda foto + mais ajustes de texto (Etapa 6)
+
+- **Segunda foto adicionada**: `public/images/thais-sobre.jpg` — usada
+  apenas na seção "Sobre Mim" ("Quem eu sou?"). O Hero continua com a foto
+  original (`public/images/thais.jpg`). Isso resolve o item pendente de
+  "segunda foto" listado anteriormente. Gerado também um blur-placeholder
+  próprio para a nova foto em `src/lib/imagePlaceholders.ts`.
+- **Rótulo "Psicanálise" removido** da seção "Como funciona o processo
+  terapêutico comigo" — era um eyebrow label decorativo que eu havia
+  adicionado durante o redesign (Etapa 2/3) e não fazia sentido ali; a
+  Thais pediu a remoção. O texto do parágrafo (que também menciona
+  Psicanálise) não foi alterado.
+- **Mais textos revisados pela Thais** diretamente em `site.ts`:
+  especialidades reorganizadas (Crianças/Adolescentes agora são dois
+  cards separados; textos de várias especialidades reescritos), segunda
+  modalidade renomeada de "Urgência (On-line)" para "Encaixe prioritário"
+  com texto ajustado, pequenos ajustes de pontuação no FAQ.
+
 ## SEO
 
 - Next.js Metadata API por página (title, description, Open Graph, Twitter Card) — já existe uma boa base de title/description/keywords no HTML atual.
@@ -185,9 +203,6 @@ HTML estático gerado.
 - URLs reais do Instagram e LinkedIn (atualmente `#`).
 - Cidade/região de atendimento presencial, se houver (para SEO local).
 - Domínio do site — ainda a definir (decisão adiada para a etapa de deploy).
-- Segunda foto: hoje o Hero e a seção "Sobre Mim" reaproveitam a mesma foto
-  (`public/images/thais.jpg`) com enquadramentos diferentes; uma segunda foto
-  traria mais variedade visual entre as duas seções.
 - Apple touch icon (`apple-icon.png`, usado ao salvar o site na tela inicial
   do iPhone) — ainda não gerado; pode reaproveitar a mesma arte do favicon.
 
@@ -200,6 +215,7 @@ HTML estático gerado.
 5. ~~Ajustes finos (Etapa 3)~~ — concluído.
 6. ~~Benchmark e polimento de interação (Etapa 4)~~ — concluído.
 7. ~~Correção de bug de mobile + texto revisado (Etapa 5)~~ — concluído.
-8. Preencher as informações pendentes listadas acima (WhatsApp, CRP, redes
+8. ~~Segunda foto + mais ajustes de texto (Etapa 6)~~ — concluído.
+9. Preencher as informações pendentes listadas acima (WhatsApp, CRP, redes
    sociais, etc.) assim que estiverem disponíveis.
-9. Deploy (Cloudflare + domínio) — passo a passo em [`DEPLOYMENT.md`](./DEPLOYMENT.md).
+10. Deploy (Cloudflare + domínio) — passo a passo em [`DEPLOYMENT.md`](./DEPLOYMENT.md).

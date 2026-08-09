@@ -28,34 +28,34 @@ export const hero = {
   title:
     "Espaço seguro para a sua jornada de autoconhecimento e transformação.",
   subtitle:
-    "Sou Thais Fontana, psicóloga clínica e escolar especializada em saúde mental, desenvolvimento humano, Psicanálise e educação permanente.",
+    "Sou Thais Fontana, psicóloga clínica e escolar especializada em saúde mental, desenvolvimento humano, psicanálise e educação permanente.",
   cta: "Agendar uma Consulta",
 };
 
 export const especialidades = [
   {
-    title: "Crianças e Adolescentes",
-    text: "Compreender o processo de desenvolvimento físico e emocional com linguagem e técnicas adequadas para a idade. Foco na elaboração de conflitos e orientação aos responsáveis.",
+    title: "Crianças",
+    text: "Compreensão do processo de desenvolvimento físico e emocional com tecnicas lúdicas e linguagem adequada para cada faixa etária. Foco na elaboração de conflitos e orientação aos responsáveis.",
+  },
+  {
+    title: "Adolescentes",
+    text: "Acolhimento com escuta sensível e estratégias para lidar com demandas típicas da adolescência. Ênfase no desenvolvimento da autonomia e de relações mais saudáveis consigo e com os outros.",
   },
   {
     title: "Adultos",
-    text: "Técnicas e estratégias adequadas ao contexto de cada pessoa, constituindo um processo único e personalizado.",
+    text: "Apoio psicológico para o enfrentamento de demandas de saúde mental, com técnicas e estratégias adequadas para o contexto de cada pessoa, constituindo um processo único e personalizado.",
   },
   {
     title: "Saúde da Mulher",
     text: "Acolhimento a mulheres vítimas de violência e relacionamentos abusivos, resgate da autoestima e estratégias de fortalecimento.",
   },
   {
-    title: "Desenvolvimento Socioemocional",
-    text: "Estímulos ao desenvolvimento físico e psíquico de jovens.",
-  },
-  {
     title: "Acompanhamento Familiar",
-    text: "Orientação parental, mediação familiar e estratégias para a rotina e dinâmica da casa.",
+    text: "Suporte para famílias que buscam lidar com conflitos, crises ou transições. Um ambiente seguro de escuta para fortalecer os vínculos e promover relações mais saudáveis.",
   },
   {
     title: "Terapia de Casal",
-    text: "Espaço focado em melhorar a comunicação, mediar conflitos e promover o fortalecimento da relação.",
+    text: "Espaço direcionado à compreensão da dinâmica do casal, identificação de padrões, alinhamento de espectativas e aprimoramento da comunicação e da convivência.",
   },
 ];
 
@@ -66,7 +66,7 @@ export const sobre = {
     "Acredito que o cuidado em psicoterapia acontece por meio de uma escuta sensível, ética e livre de julgamentos, possibilitando um espaço seguro para que a sua verdadeira essência ganhe voz.",
     "Atendo crianças e adolescentes, oferecendo suporte clínico e escolar em questões emocionais e do desenvolvimento.",
     "Com adultos, ​atuo na clínica em demandas complexas de saúde mental, como transtornos de humor, luto, vícios, relacionamentos abusivos e demais  questões psicológicas. ",
-    "A fim de oferecer um atendimento de qualidade, tenho especialização em Saúde Mental e Desenvolvimento Humano (PUCPR) e em Educação Permanente em Saúde e Educação (FIOCRUZ). Atualmente, aprofundo minha prática clínica com a especialização em Psicanálise pela PUCRS."
+    "A fim de oferecer um atendimento de qualidade, tenho especialização em Saúde Mental e Desenvolvimento Humano (PUCPR) e em Educação Permanente em Saúde e Educação (FIOCRUZ). Atualmente, aprofundo minha prática clínica com a especialização em Psicanálise (PUCRS)."
   ]
 };
 
@@ -95,13 +95,13 @@ export const modalidades = [
   },
   {
     icon: "heart-pulse",
-    title: "Urgência (On-line)",
-    text: "Suporte rápido em momentos de crise (ansiedade generalizada, ataques de pânico, rebaixamentos de humor e adversidades do dia a dia) para oferecer acolhimento, amenizar o sofrimento e levantar possibilidades de enfrentamento.",
+    title: "Encaixe prioritário",
+    text: "Suporte em momentos de crise (ansiedade, ataques de pânico, rebaixamentos de humor e adversidades do dia a dia) para oferecer acolhimento, amenizar o sofrimento e levantar possibilidades de enfrentamento.",
   },
   {
     icon: "users",
     title: "Atendimento Presencial",
-    text: "Sessões realizadas em um consultório acolhedor e seguro, projetado para proporcionar conforto e privacidade. Ideal para quem prefere o contato direto e o ambiente dedicado exclusivamente ao cuidado presencial.",
+    text: "Sessões realizadas em um consultório acolhedor e seguro, projetado para proporcionar conforto e privacidade. Ideal para quem prefere o contato direto e o ambiente físico dedicado ao cuidado.",
   },
 ] as const;
 
@@ -122,15 +122,15 @@ export const faq = [
     ],
   },
   {
-    question: "Qual é o meu papel nesse processo?",
+    question: "Qual é o papel da psicóloga nesse processo?",
     answer: [
       "Além da escuta sensível, ética e qualificada, meu papel é auxiliar para que você identifique suas questões, intervindo e pontuando algumas percepções e orientações conforme necessário. Juntos, ligamos os pontos da sua história, permitindo a elaboração das demandas, sejam elas mais profundas ou corriqueiras, mas que estejam pesando na sua rotina.",
     ],
   },
   {
-    question: "Como saber se a terapia é para mim?",
+    question: "Como saber se a terapia é para você",
     answer: [
-      "A terapia é um espaço seguro para qualquer pessoa que busque autoconhecimento, queira lidar melhor com suas emoções, ou esteja passando por momentos de ansiedade, luto, transições de vida ou dificuldades nos relacionamentos. Não é preciso estar em crise para iniciar.",
+      "A terapia é um espaço seguro para qualquer pessoa que busque autoconhecimento, queira lidar melhor com suas emoções ou esteja passando por momentos de ansiedade, luto, transições de vida ou dificuldades nos relacionamentos. Não é preciso estar em crise para iniciar.",
     ],
   },
   {
@@ -142,8 +142,7 @@ export const faq = [
   {
     question: "A terapia online funciona?",
     answer: [
-      "Sim! A psicoterapia online tem a sua validade comprovada e é regulamentada pelo Conselho Federal de Psicologia (CFP).",
-      "O vínculo de confiança, o acolhimento e a elaboração das suas questões acontecem da mesma forma através da tela. O espaço seguro e livre de julgamentos que construímos juntos transcende o ambiente físico do consultório.",
+      "Sim! A psicoterapia online tem a sua validade comprovada e é regulamentada pelo Conselho Federal de Psicologia (CFP). O vínculo de confiança, o acolhimento e a elaboração das suas questões acontecem da mesma forma através da tela. O espaço seguro e livre de julgamentos que construímos juntos transcende o ambiente físico do consultório.",
     ],
   },
   {

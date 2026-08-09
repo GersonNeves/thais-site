@@ -1,5 +1,11 @@
-// Tiny base64 preview of public/images/thais.jpg, used as next/image's
-// blurDataURL so the photo fades in from a blurred preview instead of
-// popping in abruptly. Regenerate if the source photo changes.
+// Tiny base64 previews used as next/image's blurDataURL so photos fade in
+// from a blurred preview instead of popping in abruptly. Regenerate if the
+// source photo changes.
+
+// public/images/thais.jpg (Hero)
 export const THAIS_PHOTO_BLUR_DATA_URL =
   "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAPAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUG/8QAIRAAAgEDBAMBAAAAAAAAAAAAAQIDAAQREhMhUQUiMXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AH3V/sSSYUFIiA2Qee8GqO3WCnvp7gy62GmVyx47+j8p6eev1RVFycAYHqKEN//Z";
+
+// public/images/thais-sobre.jpg (Sobre Mim / "Quem eu sou?")
+export const THAIS_SOBRE_BLUR_DATA_URL =
+  "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMG/8QAHhAAAgICAwEBAAAAAAAAAAAAAQIDEQAhBBIxIrH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEx/9oADAMBAAIRAxEAPwC8/L6CR7+YmC1rfl/uJFEWCCD5mQmmkcOWdj2azv04hOTMEUCZwKGsJS4//9k=";

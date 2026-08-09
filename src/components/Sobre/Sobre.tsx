@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { sobre } from "@/content/site";
 import Reveal from "@/components/Reveal/Reveal";
-import { THAIS_PHOTO_BLUR_DATA_URL } from "@/lib/imagePlaceholders";
+import { THAIS_SOBRE_BLUR_DATA_URL } from "@/lib/imagePlaceholders";
 import styles from "./Sobre.module.css";
 
 export default function Sobre() {
@@ -12,12 +12,12 @@ export default function Sobre() {
           <div className={styles.imgOuter}>
             <div className={styles.imgFrame}>
               <Image
-                src="/images/thais.jpg"
+                src="/images/thais-sobre.jpg"
                 alt="Thais Fontana"
                 fill
                 sizes="(max-width: 992px) 90vw, 380px"
                 placeholder="blur"
-                blurDataURL={THAIS_PHOTO_BLUR_DATA_URL}
+                blurDataURL={THAIS_SOBRE_BLUR_DATA_URL}
               />
             </div>
           </div>
