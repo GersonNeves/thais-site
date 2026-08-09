@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { alemDaClinica } from "@/content/site";
 import { FlorescerIcon } from "@/components/icons/Icons";
 import Reveal from "@/components/Reveal/Reveal";
+import { THAIS_ARTE_BLUR_DATA_URL } from "@/lib/imagePlaceholders";
 import styles from "./AlemDaClinica.module.css";
 
 export default function AlemDaClinica() {
@@ -22,6 +24,16 @@ export default function AlemDaClinica() {
               ))}
             </div>
             <div className={styles.col}>
+              <div className={styles.artFrame}>
+                <Image
+                  src="/images/thais-arte.jpg"
+                  alt="Pintura em aquarela feita pela Thais"
+                  fill
+                  sizes="(max-width: 992px) 90vw, 400px"
+                  placeholder="blur"
+                  blurDataURL={THAIS_ARTE_BLUR_DATA_URL}
+                />
+              </div>
               <blockquote className={styles.quote}>
                 &ldquo;{alemDaClinica.quote.text}&rdquo;
                 <br />

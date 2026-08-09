@@ -181,6 +181,10 @@ HTML estático gerado.
   adicionado durante o redesign (Etapa 2/3) e não fazia sentido ali; a
   Thais pediu a remoção. O texto do parágrafo (que também menciona
   Psicanálise) não foi alterado.
+- **Terceira foto adicionada**: `public/images/thais-arte.jpg` (uma pintura
+  em aquarela feita pela própria Thais) — inserida na seção "Quem é a Thais
+  além da clínica?", acima da citação de Winnicott e ao lado do texto
+  pessoal, ilustrando diretamente o parágrafo sobre pintar telas.
 - **Mais textos revisados pela Thais** diretamente em `site.ts`:
   especialidades reorganizadas (Crianças/Adolescentes agora são dois
   cards separados; textos de várias especialidades reescritos), segunda

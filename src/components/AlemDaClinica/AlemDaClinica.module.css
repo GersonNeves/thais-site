@@ -35,6 +35,21 @@
   margin-bottom: 0;
 }
 
+.artFrame {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(47, 62, 70, 0.15);
+  margin-bottom: 1.75rem;
+}
+
+.artFrame img {
+  object-fit: cover;
+}
+
 .quote {
   margin: 0;
   border-left: 2px solid var(--mid-tone);
