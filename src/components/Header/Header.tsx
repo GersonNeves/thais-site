@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navLinks, hero, whatsappHref } from "@/content/site";
+import { navLinks, hero, siteConfig, whatsappHref } from "@/content/site";
 import { FlorescerIcon } from "@/components/icons/Icons";
 import styles from "./Header.module.css";
 
@@ -53,6 +53,7 @@ export default function Header() {
           <span className={styles.logoText}>
             <span className={styles.logoName}>Thais Fontana</span>
             <span className={styles.logoTag}>Psicóloga Clínica</span>
+            <span className={styles.logoCrp}>{siteConfig.crp}</span>
           </span>
         </a>
 
