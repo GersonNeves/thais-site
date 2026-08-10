@@ -2,6 +2,11 @@
 
 Plano de reconstrução do site atual (`thaisFontanaPsi.html`) em Next.js, com foco em melhorar SEO, performance e design, mantendo todo o conteúdo/texto já escrito pela Thais.
 
+**Status atual:** conteúdo, design e dados de contato (WhatsApp, CRP, redes
+sociais) estão completos e revisados pela Thais. O que falta é decidir o
+domínio e publicar — ver [`DEPLOYMENT.md`](./DEPLOYMENT.md) quando for a
+hora.
+
 ## Stack
 
 - **Next.js 16** (App Router, TypeScript) — SSR/SSG para SEO forte e controle total do `<head>`.
@@ -14,7 +19,7 @@ Plano de reconstrução do site atual (`thaisFontanaPsi.html`) em Next.js, com f
 
 Site de página única (single page), mesma abordagem do HTML atual, dividido em componentes:
 
-1. **Header/Nav** — logo com ícone animado (galho), links âncora (Especialidades, Sobre Mim, Modalidades, FAQ, Contato), menu hamburguer mobile.
+1. **Header/Nav** — logo com ícone animado (galho), nome, "Psicóloga Clínica" e número do CRP; links âncora (Especialidades, Sobre Mim, Modalidades, FAQ, Contato), menu hamburguer mobile.
 2. **Hero** — headline, subtítulo, foto da Thais, CTA para WhatsApp.
 3. **Especialidades** — 6 cards: Crianças e Adolescentes, Adultos, Saúde da Mulher, Desenvolvimento Socioemocional, Acompanhamento Familiar, Terapia de Casal.
 4. **Sobre Mim** — foto + biografia, formações (PUCPR, FIOCRUZ, PUCRS).
@@ -191,6 +196,17 @@ HTML estático gerado.
   modalidade renomeada de "Urgência (On-line)" para "Encaixe prioritário"
   com texto ajustado, pequenos ajustes de pontuação no FAQ.
 
+## Dados reais de contato (Etapa 7)
+
+- **Número de WhatsApp, CRP e redes sociais reais preenchidos** em
+  `siteConfig` (`src/content/site.ts`), substituindo todos os placeholders.
+  Corrigido também o `linkedinUrl`, que estava sem o prefixo `https://` —
+  sem isso o link seria tratado como caminho relativo (quebrado) em vez de
+  link externo.
+- **CRP exibido no header**: adicionada uma terceira linha discreta com o
+  número do CRP logo abaixo de "Psicóloga Clínica" no logotipo, ao lado do
+  ícone do galho.
+
 ## SEO
 
 - Next.js Metadata API por página (title, description, Open Graph, Twitter Card) — já existe uma boa base de title/description/keywords no HTML atual.
@@ -220,6 +236,10 @@ HTML estático gerado.
 6. ~~Benchmark e polimento de interação (Etapa 4)~~ — concluído.
 7. ~~Correção de bug de mobile + texto revisado (Etapa 5)~~ — concluído.
 8. ~~Segunda foto + mais ajustes de texto (Etapa 6)~~ — concluído.
-9. Preencher as informações pendentes listadas acima (WhatsApp, CRP, redes
-   sociais, etc.) assim que estiverem disponíveis.
-10. Deploy (Cloudflare + domínio) — passo a passo em [`DEPLOYMENT.md`](./DEPLOYMENT.md).
+9. ~~Dados reais de contato (Etapa 7)~~ — concluído.
+10. (Opcional, quando surgir a necessidade) Cidade/região de atendimento
+    presencial e apple touch icon — únicos itens da lista de pendências
+    acima ainda em aberto.
+11. Deploy (Cloudflare + domínio) — passo a passo em [`DEPLOYMENT.md`](./DEPLOYMENT.md).
+    Este é o próximo passo real do projeto: o site está com conteúdo,
+    design e dados de contato completos e prontos para ir ao ar.
