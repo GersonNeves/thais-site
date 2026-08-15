@@ -49,6 +49,16 @@
   transform: translateY(-5px);
 }
 
+.doctoraliaLink {
+  display: flex;
+  opacity: 0.85;
+  transition: var(--transition);
+}
+
+.doctoraliaLink:hover {
+  opacity: 1;
+}
+
 .florescerFooter {
   display: flex;
   justify-content: center;

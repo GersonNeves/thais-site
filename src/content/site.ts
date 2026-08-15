@@ -4,12 +4,13 @@
 export const siteConfig = {
   // TODO: replace with the real production domain once it's registered.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://thaisfontanapsi.com.br",
-  whatsappNumber: "5516920032538",
+  whatsappNumber: "5516920032538", // TODO: substituir pelo número real
   whatsappMessage:
     "Olá, gostaria de saber mais sobre as sessões de terapia",
-  instagramUrl: "https://www.instagram.com/thaisfontanapsi",
-  linkedinUrl: "https://www.linkedin.com/in/thaisfontanapsi",
-  crp: "CRP 06/160986",
+  instagramUrl: "https://www.instagram.com/thaisfontanapsi", // TODO: substituir pela URL real
+  linkedinUrl: "www.linkedin.com/in/thaisfontanapsi", // TODO: substituir pela URL real
+  doctoraliaUrl: "https://www.doctoralia.com.br/thais-fontana/psicologo",
+  crp: "CRP 06/160986", // TODO: substituir pelo número real
 };
 
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(

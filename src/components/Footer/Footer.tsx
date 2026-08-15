@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { footer, siteConfig, whatsappHref } from "@/content/site";
 import { FlorescerIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/Icons";
 import Reveal from "@/components/Reveal/Reveal";
@@ -37,6 +38,20 @@ export default function Footer() {
             aria-label="LinkedIn Profissional"
           >
             <LinkedinIcon width={32} height={32} />
+          </a>
+          <a
+            href={siteConfig.doctoraliaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Doctoralia"
+            className={styles.doctoraliaLink}
+          >
+            <Image
+              src="/images/doctoralia-icon.png"
+              alt="Doctoralia"
+              width={32}
+              height={32}
+            />
           </a>
         </div>
 
