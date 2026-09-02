@@ -1,16 +1,20 @@
-// Todo o texto abaixo foi escrito pela Thais e migrado sem alterações
-// do site original (reference/thaisFontanaPsi.html).
+// Todo o texto abaixo foi escrito e revisado pela Thais.
+// Este é o único arquivo que precisa ser editado para mudanças de copy.
 
 export const siteConfig = {
-  // TODO: replace with the real production domain once it's registered.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://thaisfontanapsi.com.br",
-  whatsappNumber: "5516920032538", // TODO: substituir pelo número real
+  // Domínio de produção. Usado como URL canônica em metadata, Open Graph,
+  // JSON-LD e sitemap.xml — precisa bater exatamente com o domínio ligado
+  // ao Worker na Cloudflare.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://thaisfontanapsi.com",
+  whatsappNumber: "5516920032538",
   whatsappMessage:
     "Olá, gostaria de saber mais sobre as sessões de terapia",
-  instagramUrl: "https://www.instagram.com/thaisfontanapsi", // TODO: substituir pela URL real
-  linkedinUrl: "www.linkedin.com/in/thaisfontanapsi", // TODO: substituir pela URL real
+  // As URLs de redes sociais alimentam os links do rodapé e o array `sameAs`
+  // do JSON-LD; precisam ser absolutas, com o esquema https://.
+  instagramUrl: "https://www.instagram.com/thaisfontanapsi",
+  linkedinUrl: "https://www.linkedin.com/in/thaisfontanapsi",
   doctoraliaUrl: "https://www.doctoralia.com.br/thais-fontana/psicologo",
-  crp: "CRP 06/160986", // TODO: substituir pelo número real
+  crp: "CRP 06/160986",
 };
 
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
