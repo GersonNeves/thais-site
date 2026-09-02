@@ -28,8 +28,6 @@ const PALETTE = {
 // opacity.
 function fern({ x, y, h, rotate = 0, color, opacity = 1 }) {
   const w = h * (FERN_VB_W / FERN_VB_H);
-  const cx = x + w / 2;
-  const cy = y + h / 2;
   return `<g transform="translate(${x},${y}) rotate(${rotate}, ${w / 2}, ${h / 2})" opacity="${opacity}">
     <svg width="${w}" height="${h}" viewBox="0 0 ${FERN_VB_W} ${FERN_VB_H}">
       <path d="${FERN_PATH}" fill="none" stroke="${color}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
